@@ -21,9 +21,9 @@ public extension UIViewController {
         performSegue(withIdentifier: viewController.identifier, sender: sender)
     }
 
-    @discardableResult func presentAlert(with title: String?, message: String?, cancelButtonTitle cancelTitle: String = "Ok", cancelAction: ((UIAlertAction) -> Void)? = nil) -> UIAlertController {
+    @discardableResult func presentAlert(with title: String?, message: String?, cancelButtonTitle cancelTitle: String = "Ok", cancelAction: (() -> Void)? = nil) -> UIAlertController {
         let alert = UIAlertController(title: title?.localized, message: message?.localized, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: cancelTitle.localized, style: .cancel, handler: cancelAction))
+        alert.addAction(UIAlertAction(title: cancelTitle.localized, style: .cancel, handler: { _ in cancelAction?() }))
         present(alert, animated: true, completion: nil)
         return alert
     }

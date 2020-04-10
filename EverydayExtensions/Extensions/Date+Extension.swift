@@ -23,9 +23,7 @@ public extension Date {
         var components = DateComponents()
         components.day = 1
         components.second = -1
-        let endOfDay = Calendar.current.date(byAdding: components, to: startOfDay)
-        assert(endOfDay != nil)
-        return endOfDay!
+        return Calendar.current.date(byAdding: components, to: startOfDay)!
     }
 
     // MARK: - Public Methods
