@@ -9,8 +9,8 @@
 import Foundation
 import UIKit
 
-public typealias TableViewDataSourceAndDelegates = UITableViewDelegate & UITableViewDataSource
-public typealias CollectionViewDataSourceAndDelegates = UICollectionViewDelegate & UICollectionViewDataSource
+public typealias TableViewable = UITableViewDelegate & UITableViewDataSource
+public typealias CollectionViewable = UICollectionViewDelegate & UICollectionViewDataSource
 
 public let kTableViewDynamicCellHeight = UITableView.automaticDimension
 
@@ -24,8 +24,6 @@ public func Log(_ messages: Any..., filePath: String = #file, line: Int = #line,
         print("[\(line)] \(filename).\(function):\(message)")
     }
     else {
-        var threadName = (Thread.current.name?.isEmpty ?? true) ? "UNKNOWN THREAD" : Thread.current.name!
-        threadName = "[\(threadName)]"
-        print("\(threadName) : [\(line)] \(filename).\(function):\(message)")
+        print("\(Thread.current.name ?? "UNKNOWN THREAD") : [\(line)] \(filename).\(function):\(message)")
     }
 }
