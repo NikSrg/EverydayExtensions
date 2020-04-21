@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		AD245A8C2263A13F00AAB9D1 /* CGRect+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD245A8B2263A13F00AAB9D1 /* CGRect+Extension.swift */; };
 		AD245A8E2263A5B600AAB9D1 /* CGRectExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD245A8D2263A5B600AAB9D1 /* CGRectExtensionTests.swift */; };
-		AD275F6A243EE527000D99C0 /* UIAlertActionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD275F69243EE527000D99C0 /* UIAlertActionExtension.swift */; };
+		AD275F6A243EE527000D99C0 /* UIAlertAction+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD275F69243EE527000D99C0 /* UIAlertAction+Extension.swift */; };
 		AD275F6C243EE646000D99C0 /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD275F6B243EE646000D99C0 /* UIAlertControllerExtension.swift */; };
 		AD275F6E243EE85A000D99C0 /* UIAlertActionExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD275F6D243EE85A000D99C0 /* UIAlertActionExtensionTests.swift */; };
 		AD275F70243EE919000D99C0 /* UIAlertControllerExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD275F6F243EE919000D99C0 /* UIAlertControllerExtensionTests.swift */; };
@@ -77,7 +77,7 @@
 /* Begin PBXFileReference section */
 		AD245A8B2263A13F00AAB9D1 /* CGRect+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Extension.swift"; sourceTree = "<group>"; };
 		AD245A8D2263A5B600AAB9D1 /* CGRectExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGRectExtensionTests.swift; sourceTree = "<group>"; };
-		AD275F69243EE527000D99C0 /* UIAlertActionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertActionExtension.swift; sourceTree = "<group>"; };
+		AD275F69243EE527000D99C0 /* UIAlertAction+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertAction+Extension.swift"; sourceTree = "<group>"; };
 		AD275F6B243EE646000D99C0 /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtension.swift; sourceTree = "<group>"; };
 		AD275F6D243EE85A000D99C0 /* UIAlertActionExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertActionExtensionTests.swift; sourceTree = "<group>"; };
 		AD275F6F243EE919000D99C0 /* UIAlertControllerExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtensionTests.swift; sourceTree = "<group>"; };
@@ -154,23 +154,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD19BA3C244F32CE00A45FD5 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				ADB7BDF8240D3E4F004ED5B3 /* Protocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		AD3A9A0124405D8300962315 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				AD64F2F9230C02CD00861BFB /* Array+Extension.swift */,
 				AD245A8B2263A13F00AAB9D1 /* CGRect+Extension.swift */,
-				ADD8BB5E2233D01100B9566D /* Constants.swift */,
 				AD6CE2202232A1540018CDE2 /* Data+Extension.swift */,
 				AD6CE21E22329FAC0018CDE2 /* Date+Extension.swift */,
 				AD6CE21022329CA40018CDE2 /* DispatchQueue+Extension.swift */,
 				AD6CE2402232FECF0018CDE2 /* NSLayoutDimension+Extension.swift */,
 				ADDF4D612285601800FB67DF /* NSMutableAttributedString+Extension.swift */,
 				ADDF4D632285619000FB67DF /* NSRange+Extension.swift */,
-				ADB7BDF8240D3E4F004ED5B3 /* Protocols.swift */,
 				AD6CE23E2232FE670018CDE2 /* Sequence+Extension.swift */,
 				AD6CE1BD22326E220018CDE2 /* String+Extension.swift */,
 				AD6504462438FB0B0060900F /* TimeInterval+Extension.swift */,
-				AD275F69243EE527000D99C0 /* UIAlertActionExtension.swift */,
+				AD275F69243EE527000D99C0 /* UIAlertAction+Extension.swift */,
 				AD275F6B243EE646000D99C0 /* UIAlertControllerExtension.swift */,
 				AD6CE21622329D7E0018CDE2 /* UICollectionView+UICollectionViewCell+UICollectionReusableView+Extension.swift */,
 				AD6CE21222329CC00018CDE2 /* UIColor+Extension.swift */,
@@ -242,7 +248,9 @@
 		AD6CE1B322326DC30018CDE2 /* EverydayExtensions */ = {
 			isa = PBXGroup;
 			children = (
+				ADD8BB5E2233D01100B9566D /* Constants.swift */,
 				AD3A9A0124405D8300962315 /* Extensions */,
+				AD19BA3C244F32CE00A45FD5 /* Protocols */,
 				AD3A9A0224405D9100962315 /* Services */,
 				AD6CE1BC22326DD30018CDE2 /* Supporting Files */,
 			);
@@ -433,7 +441,7 @@
 				AD3A9A0424405DA400962315 /* PermissionService.swift in Sources */,
 				AD6CE23F2232FE670018CDE2 /* Sequence+Extension.swift in Sources */,
 				AD73C0182328E50700797FAC /* UINavigationController+Extension.swift in Sources */,
-				AD275F6A243EE527000D99C0 /* UIAlertActionExtension.swift in Sources */,
+				AD275F6A243EE527000D99C0 /* UIAlertAction+Extension.swift in Sources */,
 				AD245A8C2263A13F00AAB9D1 /* CGRect+Extension.swift in Sources */,
 				AD6CE2412232FECF0018CDE2 /* NSLayoutDimension+Extension.swift in Sources */,
 				AD6CE21B22329EF90018CDE2 /* UIStoryboard+Extension.swift in Sources */,

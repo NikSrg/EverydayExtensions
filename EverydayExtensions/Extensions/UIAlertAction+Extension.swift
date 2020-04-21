@@ -1,5 +1,5 @@
 //
-//  UIAlertActionExtension.swift
+//  UIAlertAction+Extension.swift
 //  EverydayExtensions
 //
 //  Created by Nick Sorge on 09.04.20.

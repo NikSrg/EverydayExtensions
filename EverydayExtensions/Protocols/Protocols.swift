@@ -8,13 +8,13 @@
 
 import Foundation
 
+// MARK: - CustomDebugDescription
+
 public protocol CustomDebugDescription {
     var customDebugDescription: String { get }
 }
 
 public extension CustomDebugDescription {
-    // MARK: - Public Properties
-
     var customDebugDescription: String {
         let fullDescription = Mirror(reflecting: self).children.compactMap({ arg -> String? in
             guard let propertyName = arg.label else {
@@ -25,4 +25,12 @@ public extension CustomDebugDescription {
 
         return fullDescription.joined(separator: "\n")
     }
+}
+
+// MARK: - RequiresValue
+
+protocol RequiresValue {
+    associatedtype T
+
+    var requiredValue: T { get set }
 }
