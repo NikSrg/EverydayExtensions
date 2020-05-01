@@ -46,9 +46,10 @@ public extension UIView {
         }
         layer.maskedCorners = layerCorners
         layer.cornerRadius = radius
+        clipsToBounds = true
     }
 
-    func preferedLayoutSizeFitting(size: CGSize, horizontalFittingPriority: UILayoutPriority = .defaultHigh, verticalFittingPriority: UILayoutPriority = .fittingSizeLevel) -> CGSize {
+    func preferredLayoutSizeFitting(size: CGSize, horizontalFittingPriority: UILayoutPriority = .defaultHigh, verticalFittingPriority: UILayoutPriority = .fittingSizeLevel) -> CGSize {
         return systemLayoutSizeFitting(size, withHorizontalFittingPriority: horizontalFittingPriority, verticalFittingPriority: verticalFittingPriority)
     }
 
