@@ -11,7 +11,7 @@ import UIKit
 public extension UIView {
     // MARK: - Public Methods
 
-    func pinToBounds(subview: UIView, insets: UIEdgeInsets? = nil) {
+    func pinToBounds(_ subview: UIView, insets: UIEdgeInsets? = nil) {
         subview.translatesAutoresizingMaskIntoConstraints = false
         addConstraints([subview.leadingAnchor.constraint(equalTo: leadingAnchor, constant: insets?.left ?? 0),
                         subview.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -(insets?.right ?? 0)),

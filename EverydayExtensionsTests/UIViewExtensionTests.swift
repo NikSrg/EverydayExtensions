@@ -18,7 +18,7 @@ class UIViewExtensionTests: XCTestCase {
         view.addSubview(subview)
         XCTAssertNotEqual(view.frame, subview.frame)
 
-        view.pinToBounds(subview: subview)
+        view.pinToBounds(subview)
         XCTAssertEqual(view.bounds, subview.bounds)
     }
 

@@ -29,7 +29,7 @@ public extension CustomDebugDescription {
 
 // MARK: - RequiresValue
 
-protocol RequiresValue {
+public protocol RequiresValue {
     associatedtype T
 
     var requiredValue: T { get set }
