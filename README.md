@@ -7,7 +7,6 @@ A little collection of everyday extension for the life of an iOS developer
 `pod "EverydayExtensions", :git => "https://github.com/NikSrg/EverydayExtensions.git"`
 
 ## Carthage
-`github "NikSrg/EverydayExtensions"`\
 `github "NikSrg/EverydayExtensions" "master"`
 
 # Usage
