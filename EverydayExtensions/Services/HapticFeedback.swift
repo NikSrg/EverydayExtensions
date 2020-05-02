@@ -18,6 +18,8 @@ public enum HapticFeedbackStyle {
 
     @available(iOS 13.0, *)
     case soft
+
+    @available(iOS 13.0, *)
     case rigid
 }
 
