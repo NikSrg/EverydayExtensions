@@ -8,6 +8,8 @@ A little collection of everyday extension for the life of an iOS developer
 
 ## Carthage
 `github "NikSrg/EverydayExtensions"`
+or
+`github "NikSrg/EverydayExtensions" "master"`
 
 # Usage
 `import EverydayExtensions`
