@@ -24,7 +24,7 @@ public enum HapticFeedbackStyle {
 public class HapticFeedback {
     // MARK: - Public Methods
 
-    static func occure(_ style: HapticFeedbackStyle = .light) {
+    static public func occure(_ style: HapticFeedbackStyle = .light) {
         switch style {
         case .selection:
             let generator = UISelectionFeedbackGenerator()
