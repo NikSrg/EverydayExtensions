@@ -63,6 +63,7 @@
 		ADDF4D642285619000FB67DF /* NSRange+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDF4D632285619000FB67DF /* NSRange+Extension.swift */; };
 		ADE968AA2439D8AC00C7CA28 /* URLSessionExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE968A92439D8AC00C7CA28 /* URLSessionExtensionTests.swift */; };
 		ADE968AC2439DD6800C7CA28 /* NSMutableAttributedStringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE968AB2439DD6800C7CA28 /* NSMutableAttributedStringExtensionTests.swift */; };
+		ADFE51BD245D4D1C0013C412 /* HapticFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFE51BC245D4D1C0013C412 /* HapticFeedback.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +136,7 @@
 		ADDF4D632285619000FB67DF /* NSRange+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSRange+Extension.swift"; sourceTree = "<group>"; };
 		ADE968A92439D8AC00C7CA28 /* URLSessionExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionExtensionTests.swift; sourceTree = "<group>"; };
 		ADE968AB2439DD6800C7CA28 /* NSMutableAttributedStringExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedStringExtensionTests.swift; sourceTree = "<group>"; };
+		ADFE51BC245D4D1C0013C412 /* HapticFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedback.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				AD3A9A0324405DA400962315 /* PermissionService.swift */,
+				ADFE51BC245D4D1C0013C412 /* HapticFeedback.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -442,6 +445,7 @@
 				AD6183812452B49100D61C26 /* UIImage+Extension.swift in Sources */,
 				ADD8BB5F2233D01100B9566D /* Constants.swift in Sources */,
 				AD6CE2212232A1540018CDE2 /* Data+Extension.swift in Sources */,
+				ADFE51BD245D4D1C0013C412 /* HapticFeedback.swift in Sources */,
 				AD3A9A0424405DA400962315 /* PermissionService.swift in Sources */,
 				AD6CE23F2232FE670018CDE2 /* Sequence+Extension.swift in Sources */,
 				AD73C0182328E50700797FAC /* UINavigationController+Extension.swift in Sources */,
