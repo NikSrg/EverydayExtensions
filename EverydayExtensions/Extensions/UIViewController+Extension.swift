@@ -40,4 +40,22 @@ public extension UIViewController {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
+
+    func addChildViewController(_ viewController: UIViewController) {
+        addChild(viewController)
+        view.addSubview(viewController.view)
+        viewController.willMove(toParent: self)
+    }
+
+    func removeChildViewController(_ viewController: UIViewController) {
+        guard let childViewController = children.first(where: { $0 == viewController }) else {
+            return
+        }
+        childViewController.removeFromParentViewController()
+    }
+
+    func removeFromParentViewController() {
+        willMove(toParent: nil)
+        view.removeFromSuperview()
+    }
 }
