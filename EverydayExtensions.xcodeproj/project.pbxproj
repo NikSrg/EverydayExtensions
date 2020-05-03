@@ -64,6 +64,7 @@
 		ADE968AA2439D8AC00C7CA28 /* URLSessionExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE968A92439D8AC00C7CA28 /* URLSessionExtensionTests.swift */; };
 		ADE968AC2439DD6800C7CA28 /* NSMutableAttributedStringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE968AB2439DD6800C7CA28 /* NSMutableAttributedStringExtensionTests.swift */; };
 		ADFE51BD245D4D1C0013C412 /* HapticFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFE51BC245D4D1C0013C412 /* HapticFeedback.swift */; };
+		ADFE51C4245EDACF0013C412 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFE51C3245EDACF0013C412 /* Keychain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +138,7 @@
 		ADE968A92439D8AC00C7CA28 /* URLSessionExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionExtensionTests.swift; sourceTree = "<group>"; };
 		ADE968AB2439DD6800C7CA28 /* NSMutableAttributedStringExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedStringExtensionTests.swift; sourceTree = "<group>"; };
 		ADFE51BC245D4D1C0013C412 /* HapticFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedback.swift; sourceTree = "<group>"; };
+		ADFE51C3245EDACF0013C412 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,7 +204,6 @@
 			isa = PBXGroup;
 			children = (
 				AD3A9A0324405DA400962315 /* PermissionService.swift */,
-				ADFE51BC245D4D1C0013C412 /* HapticFeedback.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -258,6 +259,7 @@
 				AD3A9A0124405D8300962315 /* Extensions */,
 				AD19BA3C244F32CE00A45FD5 /* Protocols */,
 				AD3A9A0224405D9100962315 /* Services */,
+				ADFE51C2245EDAB80013C412 /* Classes */,
 				AD6CE1BC22326DD30018CDE2 /* Supporting Files */,
 			);
 			path = EverydayExtensions;
@@ -310,6 +312,15 @@
 				ADA3F67422BF652F00FDDAB0 /* Supporting Files */,
 			);
 			path = EverydayExtensionsTests;
+			sourceTree = "<group>";
+		};
+		ADFE51C2245EDAB80013C412 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				ADFE51BC245D4D1C0013C412 /* HapticFeedback.swift */,
+				ADFE51C3245EDACF0013C412 /* Keychain.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -456,6 +467,7 @@
 				ADDF4D642285619000FB67DF /* NSRange+Extension.swift in Sources */,
 				AD6CE21F22329FAC0018CDE2 /* Date+Extension.swift in Sources */,
 				AD6504472438FB0B0060900F /* TimeInterval+Extension.swift in Sources */,
+				ADFE51C4245EDACF0013C412 /* Keychain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
