@@ -28,7 +28,7 @@ public class PermissionService: NSObject, CLLocationManagerDelegate {
 
     /// Will ask for camera permission
     /// Don't forget to set *NSCameraUsageDescription* key in your Info.plist
-    func requestCameraPermission(completion: ((AVAuthorizationStatus) -> Void)?) {
+    public func requestCameraPermission(completion: ((AVAuthorizationStatus) -> Void)?) {
         let status = AVCaptureDevice.authorizationStatus(for: .video)
         guard status != .notDetermined else {
             completion?(status)
@@ -42,7 +42,7 @@ public class PermissionService: NSObject, CLLocationManagerDelegate {
 
     /// Will ask for photo library permission
     /// Don't forget to set *NSPhotoLibraryUsageDescription* key in your Info.plist
-    func requestPhotoLibraryPermission(completion: @escaping (PHAuthorizationStatus) -> Void) {
+    public func requestPhotoLibraryPermission(completion: @escaping (PHAuthorizationStatus) -> Void) {
         let status = PHPhotoLibrary.authorizationStatus()
         guard status != .notDetermined else {
             completion(status)
@@ -54,13 +54,13 @@ public class PermissionService: NSObject, CLLocationManagerDelegate {
 
     /// Will ask for photo library permission
     /// Don't forget to set *NSMicrophoneUsageDescription* key in your Info.plist
-    func requestMicrophonePermission(completion: @escaping (Bool) -> Void) {
+    public func requestMicrophonePermission(completion: @escaping (Bool) -> Void) {
         AVAudioSession.sharedInstance().requestRecordPermission(completion)
     }
 
     /// Will show dialog for photo library permission
     /// Don't forget to set *NSLocationWhenInUseUsageDescription* or *NSLocationAlwaysUsageDescription* or *NSLocationAlwaysAndWhenInUseUsageDescription* key in your Info.plist
-    func requestLocationPermission(for type: LocationRequestType, completion: @escaping (CLAuthorizationStatus) -> Void) {
+    public func requestLocationPermission(for type: LocationRequestType, completion: @escaping (CLAuthorizationStatus) -> Void) {
         locationRequestCompletion = completion
 
         locationManager = CLLocationManager()
@@ -75,24 +75,24 @@ public class PermissionService: NSObject, CLLocationManagerDelegate {
 
     /// Will ask for calendar permission
     /// Don't forget to set *NSCalendarsUsageDescription* key in your Info.plist
-    func requestCalendarPermission(completion: @escaping (Bool, Error?) -> Void) {
+    public func requestCalendarPermission(completion: @escaping (Bool, Error?) -> Void) {
         EKEventStore().requestAccess(to: .event, completion: completion)
     }
 
     /// Will ask for reminders permission
     /// Don't forget to set *NSRemindersUsageDescription* key in your Info.plist
-    func requestReminderPermission(completion: @escaping (Bool, Error?) -> Void) {
+    public func requestReminderPermission(completion: @escaping (Bool, Error?) -> Void) {
         EKEventStore().requestAccess(to: .reminder, completion: completion)
     }
 
     /// Will ask for notifications permission
-    func requestNotificationPermission(with options: UNAuthorizationOptions, completion: @escaping (Bool, Error?) -> Void) {
+    public func requestNotificationPermission(with options: UNAuthorizationOptions, completion: @escaping (Bool, Error?) -> Void) {
         UNUserNotificationCenter.current().requestAuthorization(options: options, completionHandler: completion)
     }
 
     /// Will ask for contacts permission
     /// Don't forget to set *NSContactsUsageDescription* key in your Info.plist
-    func requestContactsPermission(completion: @escaping (CNAuthorizationStatus) -> Void) {
+    public func requestContactsPermission(completion: @escaping (CNAuthorizationStatus) -> Void) {
         let status = CNContactStore.authorizationStatus(for: .contacts)
         guard status != .notDetermined else {
             completion(status)
