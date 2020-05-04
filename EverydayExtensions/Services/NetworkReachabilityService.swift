@@ -1,6 +1,6 @@
 //
 //  NetworkReachabilityService.swift
-//  NetStatusDemo
+//  EverydayExtensions
 //
 //  Created by Nick Sorge on 04.05.20.
 //  Copyright © 2020 Appcoda. All rights reserved.
