@@ -46,6 +46,7 @@
 		AD6CE23F2232FE670018CDE2 /* Sequence+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6CE23E2232FE670018CDE2 /* Sequence+Extension.swift */; };
 		AD6CE2412232FECF0018CDE2 /* NSLayoutDimension+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6CE2402232FECF0018CDE2 /* NSLayoutDimension+Extension.swift */; };
 		AD73C0182328E50700797FAC /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD73C0172328E50700797FAC /* UINavigationController+Extension.swift */; };
+		AD9CC0702460721700FD86F5 /* NetworkReachabilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9CC06F2460721700FD86F5 /* NetworkReachabilityService.swift */; };
 		ADA67AA222BA68260042451B /* TimeIntervalExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA67AA122BA68260042451B /* TimeIntervalExtensionTests.swift */; };
 		ADB7BDF9240D3E4F004ED5B3 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB7BDF8240D3E4F004ED5B3 /* Protocols.swift */; };
 		ADC635DA22C795F90091EDE4 /* UIScrollViewExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC635D922C795F90091EDE4 /* UIScrollViewExtensionTests.swift */; };
@@ -119,6 +120,7 @@
 		AD6CE23E2232FE670018CDE2 /* Sequence+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+Extension.swift"; sourceTree = "<group>"; };
 		AD6CE2402232FECF0018CDE2 /* NSLayoutDimension+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutDimension+Extension.swift"; sourceTree = "<group>"; };
 		AD73C0172328E50700797FAC /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
+		AD9CC06F2460721700FD86F5 /* NetworkReachabilityService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkReachabilityService.swift; sourceTree = "<group>"; };
 		ADA67AA122BA68260042451B /* TimeIntervalExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalExtensionTests.swift; sourceTree = "<group>"; };
 		ADB7BDF8240D3E4F004ED5B3 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		ADC635D922C795F90091EDE4 /* UIScrollViewExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollViewExtensionTests.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				AD3A9A0324405DA400962315 /* PermissionService.swift */,
+				AD9CC06F2460721700FD86F5 /* NetworkReachabilityService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -445,6 +448,7 @@
 				AD64F2FA230C02CD00861BFB /* Array+Extension.swift in Sources */,
 				ADB7BDF9240D3E4F004ED5B3 /* Protocols.swift in Sources */,
 				AD6CE21922329E180018CDE2 /* UIView+Extension.swift in Sources */,
+				AD9CC0702460721700FD86F5 /* NetworkReachabilityService.swift in Sources */,
 				AD6CE21322329CC00018CDE2 /* UIColor+Extension.swift in Sources */,
 				AD61643322578397002A4CE5 /* URLSession+Extension.swift in Sources */,
 				AD6CE21722329D7E0018CDE2 /* UICollectionView+UICollectionViewCell+UICollectionReusableView+Extension.swift in Sources */,
@@ -646,7 +650,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "EverydayExtensions/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -676,7 +680,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "EverydayExtensions/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
