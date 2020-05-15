@@ -29,5 +29,6 @@ public func Log(_ messages: Any..., filePath: String = #file, line: Int = #line,
 }
 
 public func NSDocumentsDirectory() -> String {
-    return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.absoluteString
+    let filePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.absoluteString
+    return filePath.replacingOccurrences(of: "file://", with: "")
 }
