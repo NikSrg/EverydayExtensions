@@ -11,7 +11,6 @@ import Foundation
 // MARK: - CustomDebugDescription
 
 public protocol CustomDebugDescription {
-    var customDebugDescription: String { get }
 }
 
 public extension CustomDebugDescription {
