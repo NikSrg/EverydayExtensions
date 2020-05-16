@@ -30,8 +30,8 @@ public extension UIImageView {
         }
     }
 
-    func imageFrom(_ URL: URL, checkTempDirectory: Bool = true, storeImge: Bool = true, showSpinner show: Bool = true, spinnerColor: UIColor = .white) {
-        if let image = imageFromTempDirectory(for: URL) {
+    func imageFrom(_ URL: URL, checkTempDirectory: Bool = true, storeImge: Bool = true, filename: String? = nil, showSpinner show: Bool = true, spinnerColor: UIColor = .white) {
+        if let image = imageFromTempDirectory(for: URL, filename: filename) {
             self.image = image
             return
         }
@@ -49,7 +49,7 @@ public extension UIImageView {
             }
 
             if storeImge {
-                self.storeImageDataInTempFolder(data, for: URL)
+                self.storeImageDataInTempFolder(data, for: URL, filename: filename)
             }
 
             DispatchQueue.main.async {
@@ -59,16 +59,16 @@ public extension UIImageView {
         }
     }
 
-    func imageFromTempDirectory(for URL: URL) -> UIImage? {
-        let path = NSTemporaryDirectory().appending(URL.lastPathComponent)
+    func imageFromTempDirectory(for URL: URL, filename: String? = nil) -> UIImage? {
+        let path = NSTemporaryDirectory().appending(filename ?? URL.lastPathComponent)
         if FileManager.default.fileExists(atPath: path) {
             return UIImage(contentsOfFile: path)
         }
         return nil
     }
 
-    @discardableResult func storeImageDataInTempFolder(_ image: Data, for URL: URL) -> Bool {
-        let path = NSTemporaryDirectory().appending(URL.lastPathComponent)
+    @discardableResult func storeImageDataInTempFolder(_ image: Data, for URL: URL, filename: String? = nil) -> Bool {
+        let path = NSTemporaryDirectory().appending(filename ?? URL.lastPathComponent)
         return FileManager.default.createFile(atPath: path, contents: image, attributes: nil)
     }
 }
