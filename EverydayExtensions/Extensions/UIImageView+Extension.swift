@@ -30,8 +30,8 @@ public extension UIImageView {
         }
     }
 
-    func imageFrom(_ URL: URL, checkTempDirectory: Bool = true, storeImge: Bool = true, filename: String? = nil, showSpinner show: Bool = true, spinnerColor: UIColor = .white) {
-        if let image = imageFromTempDirectory(for: URL, filename: filename) {
+    func imageFrom(_ URL: URL, checkTempDirectory: Bool = true, storeImge: Bool = true, showSpinner show: Bool = true, spinnerColor: UIColor = .white) {
+        if let image = imageFromTempDirectory(for: URL) {
             self.image = image
             return
         }
@@ -49,7 +49,36 @@ public extension UIImageView {
             }
 
             if storeImge {
-                self.storeImageDataInTempFolder(data, for: URL, filename: filename)
+                self.storeImageDataInTempFolder(data, for: URL)
+            }
+
+            DispatchQueue.main.async {
+                self.showSpinner(false)
+                self.image = UIImage(data: data)
+            }
+        }
+    }
+
+    func imageFrom(_ URL: URL, customFilename: String, checkTempDirectory: Bool = true, storeImge: Bool = true, showSpinner show: Bool = true, spinnerColor: UIColor = .white) {
+        if let image = imageFromTempDirectory(for: URL, filename: customFilename) {
+            self.image = image
+            return
+        }
+
+        if show {
+            showSpinner(true, color: spinnerColor)
+        }
+
+        DispatchQueue(label: "de.melAncHOLY_MAN.EverydayExtensions", qos: .background).async {
+            guard let data = try? Data(contentsOf: URL) else {
+                DispatchQueue.main.async {
+                    self.showSpinner(false)
+                }
+                return
+            }
+
+            if storeImge {
+                self.storeImageDataInTempFolder(data, for: URL, filename: customFilename)
             }
 
             DispatchQueue.main.async {
