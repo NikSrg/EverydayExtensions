@@ -8,10 +8,10 @@
 
 import Foundation
 
-extension UIScrollView {
+public extension UIScrollView {
     // MARK: - Public Properties
 
-    public var currentPage: Int {
+    var currentPage: Int {
         return Int((contentOffset.x + (frame.size.width / 2)) / frame.width)
     }
 }
