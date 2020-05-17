@@ -12,11 +12,7 @@ import Foundation
 public extension Date {
     // MARK: - Private Properties
     
-    private static var dateformatter: DateFormatter {
-        let formatter = DateFormatter()
-        formatter.locale = Locale.current
-        return formatter
-    }
+    private static var dateformatter = DateFormatter()
     
     // MARK: - Public Properties
     
@@ -67,7 +63,8 @@ public extension Date {
         return DateFormatter.localizedString(from: self, dateStyle: dateStyle, timeStyle: timeStyle)
     }
     
-    func string(withFormat format: String) -> String? {
+    func string(withFormat format: String, local: Locale = Locale.current) -> String? {
+        Date.dateformatter.locale = local
         Date.dateformatter.dateFormat = format
         return Date.dateformatter.string(from: self)
     }
