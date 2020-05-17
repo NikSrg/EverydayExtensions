@@ -12,7 +12,11 @@ import Foundation
 public extension Date {
     // MARK: - Private Properties
     
-    private static let dateformatter = DateFormatter()
+    private static var dateformatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.locale = Locale.current
+        return formatter
+    }
     
     // MARK: - Public Properties
     
