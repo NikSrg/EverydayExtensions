@@ -30,4 +30,14 @@ public extension Array where Element: Equatable {
         }
         return remove(at: index)
     }
+
+    func unique() -> [Element] {
+        var uniqueValues = [Element]()
+        forEach({
+            if !uniqueValues.contains($0) {
+                uniqueValues.append($0)
+            }
+        })
+        return uniqueValues
+    }
 }
