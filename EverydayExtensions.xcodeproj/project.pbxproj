@@ -13,6 +13,7 @@
 		AD275F6C243EE646000D99C0 /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD275F6B243EE646000D99C0 /* UIAlertControllerExtension.swift */; };
 		AD275F6E243EE85A000D99C0 /* UIAlertActionExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD275F6D243EE85A000D99C0 /* UIAlertActionExtensionTests.swift */; };
 		AD275F70243EE919000D99C0 /* UIAlertControllerExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD275F6F243EE919000D99C0 /* UIAlertControllerExtensionTests.swift */; };
+		AD3601922478F98D009ABF7B /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3601912478F98D009ABF7B /* UITableView+Extension.swift */; };
 		AD3A9A0424405DA400962315 /* PermissionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3A9A0324405DA400962315 /* PermissionService.swift */; };
 		AD472F4A240915D700153A19 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD472F49240915D700153A19 /* UIDevice+Extension.swift */; };
 		AD5624E724392256000A19F9 /* UIViewControllerExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5624E624392256000A19F9 /* UIViewControllerExtensionTests.swift */; };
@@ -85,6 +86,7 @@
 		AD275F6B243EE646000D99C0 /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtension.swift; sourceTree = "<group>"; };
 		AD275F6D243EE85A000D99C0 /* UIAlertActionExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertActionExtensionTests.swift; sourceTree = "<group>"; };
 		AD275F6F243EE919000D99C0 /* UIAlertControllerExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtensionTests.swift; sourceTree = "<group>"; };
+		AD3601912478F98D009ABF7B /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		AD3A9A0324405DA400962315 /* PermissionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionService.swift; sourceTree = "<group>"; };
 		AD472F49240915D700153A19 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
 		AD5624E624392256000A19F9 /* UIViewControllerExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensionTests.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				AD73C0172328E50700797FAC /* UINavigationController+Extension.swift */,
 				ADCD47A32242424900C229A5 /* UIScrollView+Extension.swift */,
 				AD6CE21A22329EF90018CDE2 /* UIStoryboard+Extension.swift */,
+				AD3601912478F98D009ABF7B /* UITableView+Extension.swift */,
 				AD6CE21422329CFD0018CDE2 /* UITableView+UITableViewCell+Extension.swift */,
 				AD6CE21822329E180018CDE2 /* UIView+Extension.swift */,
 				AD6CE21C22329F3F0018CDE2 /* UIViewController+Extension.swift */,
@@ -472,6 +475,7 @@
 				AD6CE21F22329FAC0018CDE2 /* Date+Extension.swift in Sources */,
 				AD6504472438FB0B0060900F /* TimeInterval+Extension.swift in Sources */,
 				ADFE51C4245EDACF0013C412 /* Keychain.swift in Sources */,
+				AD3601922478F98D009ABF7B /* UITableView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
