@@ -24,7 +24,8 @@ public func Log(_ messages: Any..., filePath: String = #file, line: Int = #line,
         print("[\(line)] \(filename).\(function):\(message)")
     }
     else {
-        print("\(Thread.current.name ?? "UNKNOWN THREAD") : [\(line)] \(filename).\(function):\(message)")
+        let threadName = (Thread.current.name?.isEmpty ?? true) ? "UNKNOWN THREAD" : Thread.current.name!
+        print("\(threadName) : [\(line)] \(filename).\(function):\(message)")
     }
 }
 
