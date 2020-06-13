@@ -9,6 +9,12 @@
 import Foundation
 
 public extension Array {
+    // MARK: - Public Properties
+
+    var isNotEmpty: Bool {
+        return !isEmpty
+    }
+
     // MARK: - Public Methods
 
     @discardableResult mutating func remove(where condition: @escaping (Element) -> Bool) -> Element? {
