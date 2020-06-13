@@ -11,7 +11,7 @@ import Foundation
 public class Keychain {
     // MARK: - Public Methods
 
-    @discardableResult public func save(data: Data, for key: String) -> Bool {
+    @discardableResult public static func save(data: Data, for key: String) -> Bool {
         let query: [String: Any] = [kSecClass as String: kSecClassGenericPassword,
                                     kSecAttrAccount as String: key,
                                     kSecValueData as String: data,
@@ -23,7 +23,7 @@ public class Keychain {
         return true
     }
 
-    public func getData(for key: String) -> Data? {
+    public static func getData(for key: String) -> Data? {
         let query: [String: Any] = [kSecClass as String: kSecClassGenericPassword,
                                     kSecAttrAccount as String: key,
                                     kSecReturnData as String: kCFBooleanTrue!,
@@ -35,7 +35,7 @@ public class Keychain {
         return item as? Data
     }
 
-    @discardableResult public func deleteData(for key: String) -> Bool {
+    @discardableResult public static func deleteData(for key: String) -> Bool {
         let query: [String: Any] = [kSecClass as String: kSecClassGenericPassword,
                                     kSecAttrAccount as String: key,
                                     kSecAttrSynchronizable as String: kCFBooleanTrue!]
