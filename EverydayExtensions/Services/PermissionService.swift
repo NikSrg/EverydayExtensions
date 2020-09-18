@@ -12,6 +12,7 @@ import AVFoundation
 import Photos
 import EventKit
 import Contacts
+import NotificationCenter
 
 public enum LocationRequestType {
     case whenInUse
