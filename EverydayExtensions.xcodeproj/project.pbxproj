@@ -65,6 +65,7 @@
 		ADDF4D642285619000FB67DF /* NSRange+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDF4D632285619000FB67DF /* NSRange+Extension.swift */; };
 		ADE968AA2439D8AC00C7CA28 /* URLSessionExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE968A92439D8AC00C7CA28 /* URLSessionExtensionTests.swift */; };
 		ADE968AC2439DD6800C7CA28 /* NSMutableAttributedStringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE968AB2439DD6800C7CA28 /* NSMutableAttributedStringExtensionTests.swift */; };
+		ADEBDB11255F1DB500556728 /* URLRequestOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEBDB10255F1DB500556728 /* URLRequestOperation.swift */; };
 		ADFE51BD245D4D1C0013C412 /* HapticFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFE51BC245D4D1C0013C412 /* HapticFeedback.swift */; };
 		ADFE51C4245EDACF0013C412 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFE51C3245EDACF0013C412 /* Keychain.swift */; };
 /* End PBXBuildFile section */
@@ -141,6 +142,7 @@
 		ADDF4D632285619000FB67DF /* NSRange+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSRange+Extension.swift"; sourceTree = "<group>"; };
 		ADE968A92439D8AC00C7CA28 /* URLSessionExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionExtensionTests.swift; sourceTree = "<group>"; };
 		ADE968AB2439DD6800C7CA28 /* NSMutableAttributedStringExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedStringExtensionTests.swift; sourceTree = "<group>"; };
+		ADEBDB10255F1DB500556728 /* URLRequestOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestOperation.swift; sourceTree = "<group>"; };
 		ADFE51BC245D4D1C0013C412 /* HapticFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedback.swift; sourceTree = "<group>"; };
 		ADFE51C3245EDACF0013C412 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -325,6 +327,7 @@
 			children = (
 				ADFE51BC245D4D1C0013C412 /* HapticFeedback.swift */,
 				ADFE51C3245EDACF0013C412 /* Keychain.swift */,
+				ADEBDB10255F1DB500556728 /* URLRequestOperation.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 				AD245A8C2263A13F00AAB9D1 /* CGRect+Extension.swift in Sources */,
 				AD6CE2412232FECF0018CDE2 /* NSLayoutDimension+Extension.swift in Sources */,
 				AD6CE21B22329EF90018CDE2 /* UIStoryboard+Extension.swift in Sources */,
+				ADEBDB11255F1DB500556728 /* URLRequestOperation.swift in Sources */,
 				ADDF4D642285619000FB67DF /* NSRange+Extension.swift in Sources */,
 				AD6CE21F22329FAC0018CDE2 /* Date+Extension.swift in Sources */,
 				AD6504472438FB0B0060900F /* TimeInterval+Extension.swift in Sources */,
