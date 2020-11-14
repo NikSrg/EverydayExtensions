@@ -10,7 +10,7 @@ import Foundation
 
 public typealias URLRequestOperationCompletionBlock = ((Data?, URLResponse?, Error?) -> Void?)
 
-public enum State: String {
+public enum URLRequestOperationState: String {
     case ready, executing, finished, cancelled
 
     fileprivate var keyPath: String {
@@ -22,7 +22,7 @@ public class URLRequestOperation: Operation {
     // MARK: - Private Properties
 
     private var task: URLSessionTask?
-    private var sessionConfigurartion: URLSessionConfiguration?
+    private var sessionConfigurartion: URLSessionConfiguration!
     private var sessionResponseBlock: URLRequestOperationCompletionBlock?
 
     // MARK: - Public Properties
@@ -31,7 +31,7 @@ public class URLRequestOperation: Operation {
 
     private(set) var response: (data: Data?, response: URLResponse?, error: Error?)
 
-    public var state = State.ready {
+    public var state = URLRequestOperationState.ready {
         willSet {
             willChangeValue(forKey: state.keyPath)
             willChangeValue(forKey: newValue.keyPath)
@@ -60,7 +60,7 @@ public class URLRequestOperation: Operation {
 
     // MARK: - Init
 
-    init(with request: URLRequest, configuration: URLSessionConfiguration? = nil, completion: URLRequestOperationCompletionBlock? = nil) {
+    init(with request: URLRequest, configuration: URLSessionConfiguration = URLSessionConfiguration.default, completion: URLRequestOperationCompletionBlock? = nil) {
         self.request = request
         self.sessionConfigurartion = configuration
         self.sessionResponseBlock = completion
@@ -69,20 +69,11 @@ public class URLRequestOperation: Operation {
     // MARK: - Public Methods
 
     public override func main() {
-        if let configuration = sessionConfigurartion {
-            task = URLSession(configuration: configuration).dataTask(with: request, completionHandler: { data, response, error in
-                self.response = (data, response, error)
-                self.sessionResponseBlock?(data, response, error)
-                self.state = .finished
-            })
-        }
-        else {
-            task = URLSession.shared.dataTask(with: request, completionHandler: { data, response, error in
-                self.response = (data, response, error)
-                self.sessionResponseBlock?(data, response, error)
-                self.state = .finished
-            })
-        }
+        task = URLSession(configuration: sessionConfigurartion).dataTask(with: request, completionHandler: { data, response, error in
+            self.response = (data, response, error)
+            self.sessionResponseBlock?(data, response, error)
+            self.state = .finished
+        })
         task?.resume()
     }
 
