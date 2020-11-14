@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import UIKit
 
 public extension String {
     // MARK: - Private Properties
@@ -26,7 +25,7 @@ public extension String {
         guard
             i > -1, i < self.count,
             let range = Range(NSRange(location: 0, length: i), in: self) else {
-                return self
+            return self
         }
         return String(self[range])
     }
