@@ -8,5 +8,5 @@ Pod::Spec.new do |spec|
   spec.platform                 = :ios, "11.0"
   spec.swift_version            = "5.0"
   spec.source                   = { :git => "https://github.com/NikSrg/EverydayExtensions.git", :tag => "#{spec.version}" }
-  spec.source_files             = "EverydayExtensions/**/*.swift"
+  spec.source_files             = "EverydayExtensions/**/*.{swift}"
 end

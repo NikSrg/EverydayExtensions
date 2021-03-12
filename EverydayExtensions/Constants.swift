@@ -14,7 +14,7 @@ public typealias CollectionViewable = UICollectionViewDelegate & UICollectionVie
 
 public let kTableViewDynamicCellHeight = UITableView.automaticDimension
 
-public func Log(_ messages: Any..., filePath: String = #file, line: Int = #line, function: String = #function) {
+@inline(__always) public func Log(_ messages: Any..., filePath: String = #file, line: Int = #line, function: String = #function) {
     let filename = URL(fileURLWithPath: filePath).deletingPathExtension().lastPathComponent
     var message = ""
     messages.forEach({
